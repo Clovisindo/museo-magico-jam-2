@@ -3,16 +3,24 @@ extends TextureRect
 
 @export var is_fixed := false
 var being_dragged := false
+var being_rotated := false
 var mouse_offset := Vector2.ZERO
 
 signal began_dragging
 signal ended_dragging
+
+
+func init() -> void:
+	set_deferred("size",Vector2i(texture.get_size().x,texture.get_size().y) ) 
+	set_deferred("pivot_offset", Vector2i(texture.get_size().x/2, texture.get_size().y / 2))
 
 func _process(_delta: float) -> void:
 	if is_fixed:
 		return
 	if being_dragged:
 		global_position = get_global_mouse_position() - mouse_offset
+	if being_rotated:
+		rotation = lerp_angle(rotation, (get_global_mouse_position() - global_position).angle() + deg_to_rad(90), 2.5 * _delta)
 
 func _on_gui_input(event: InputEvent) -> void:
 	if is_fixed:
@@ -20,7 +28,10 @@ func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		var mouse_event := event as InputEventMouseButton
 		if mouse_event.button_index == MOUSE_BUTTON_LEFT:
-			toggle_drag(mouse_event.pressed)
+			if Global.drag_mode:
+				toggle_drag(mouse_event.pressed)
+			if Global.rotate_mode:
+				toggle_rotate(mouse_event.pressed)
 			get_viewport().set_input_as_handled()
 
 func toggle_drag(toggle_on: bool) -> void:
@@ -32,3 +43,6 @@ func toggle_drag(toggle_on: bool) -> void:
 		began_dragging.emit()
 	else:
 		ended_dragging.emit()
+
+func toggle_rotate(toggle_on: bool) -> void:
+	being_rotated = toggle_on

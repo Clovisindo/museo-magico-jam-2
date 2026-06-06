@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7kr1tlbx0nvf"]
 
-[ext_resource type="Texture2D" uid="uid://cf4m2bylju4u7" path="res://assets/pieces/icon.png" id="1_4oalm"]
+[ext_resource type="Texture2D" uid="uid://dgl0h32k5wocr" path="res://assets/pieces/caracol.png" id="1_4oalm"]
 [ext_resource type="Script" uid="uid://cacecifbe2h7l" path="res://src/movable_texture_rect/movable_texture_rect.gd" id="2_4oalm"]
 
 [node name="MovableTextureRect" type="TextureRect" unique_id=642898205]

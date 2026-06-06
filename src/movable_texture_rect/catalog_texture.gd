@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func set_texture(texture: Texture2D) -> void:
 	%MovableTextureRect.texture = texture
+	%MovableTextureRect.init()
 
 func get_texture() -> Texture2D:
 	return %MovableTextureRect.texture
@@ -26,6 +27,7 @@ func _on_movable_texture_rect_gui_input(event: InputEvent) -> void:
 			var scene: PackedScene = preload("res://src/movable_texture_rect/movable_texture_rect.tscn")
 			var copy: MovableTextureRect = scene.instantiate()
 			copy.texture = %MovableTextureRect.texture
+			copy.init()
 			target_parent.add_child(copy)
 			copy.global_position = global_position
 			copy.toggle_drag(true)

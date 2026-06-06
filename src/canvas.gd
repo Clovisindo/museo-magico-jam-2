@@ -11,7 +11,7 @@ func _ready() -> void:
 	%Main.show()
 	# Cargar imágenes:
 	for file: String in DirAccess.get_files_at(PIECES_DIR):
-		if file.ends_with(".import"):
+		if  not file.ends_with(".png"):
 			continue
 		var filepath := PIECES_DIR.path_join(file)
 		var scene := preload("res://src/movable_texture_rect/catalog_texture.tscn")
@@ -70,3 +70,19 @@ func _on_canvas_rect_child_entered_tree(_node: Node) -> void:
 
 func _on_canvas_rect_child_exiting_tree(_node: Node) -> void:
 	%SubmitButton.disabled = canvas_rect.get_child_count() <= 1
+
+
+func _on_drag_button_pressed() -> void:
+	Global._activate_drag()
+
+
+func _on_rotate_button_pressed() -> void:
+	Global._activate_rotate()
+
+
+func _on_scale_button_pressed() -> void:
+	Global._activate_scale()
+
+
+func _on_flip_button_pressed() -> void:
+	Global._activate_flip()

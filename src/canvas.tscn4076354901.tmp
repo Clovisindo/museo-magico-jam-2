@@ -75,6 +75,13 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer" unique_id=2072485280]
 layout_mode = 2
 
+[node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer" unique_id=938409143]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+disabled = true
+text = "Terminar"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer" unique_id=1925517065]
 layout_mode = 2
 
@@ -97,13 +104,6 @@ text = "Escalar"
 layout_mode = 2
 size_flags_vertical = 0
 text = "Reflejar"
-
-[node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938409143]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 10
-disabled = true
-text = "Terminar"
 
 [node name="Confirmation" type="Control" parent="CanvasLayer/MarginContainer" unique_id=638971364]
 unique_name_in_owner = true
@@ -150,10 +150,10 @@ text = "Cancelar"
 
 [connection signal="child_entered_tree" from="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer/CanvasRect" to="." method="_on_canvas_rect_child_entered_tree"]
 [connection signal="child_exiting_tree" from="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer/CanvasRect" to="." method="_on_canvas_rect_child_exiting_tree"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/DragButton" to="." method="_on_drag_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/RotateButton" to="." method="_on_rotate_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ScaleButton" to="." method="_on_scale_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FlipButton" to="." method="_on_flip_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="text_changed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
