@@ -18,41 +18,108 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=160012215]
+[node name="Main" type="Control" parent="CanvasLayer/MarginContainer" unique_id=1265952291]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CatalogPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1591230097]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/Main" unique_id=160012215]
+layout_mode = 0
+offset_right = 1136.0
+offset_bottom = 632.0
+
+[node name="CatalogPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=1591230097]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel" unique_id=1290338694]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CatalogPanel" unique_id=1290338694]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 follow_focus = true
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/ScrollContainer" unique_id=368954327]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CatalogPanel/ScrollContainer" unique_id=368954327]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="PieceContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/ScrollContainer/MarginContainer" unique_id=1071667301]
+[node name="PieceContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CatalogPanel/ScrollContainer/MarginContainer" unique_id=1071667301]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="CanvasPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=770087864]
+[node name="CanvasPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=770087864]
+unique_name_in_owner = true
 z_as_relative = false
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CanvasPanel" unique_id=1161123564]
+[node name="CanvasContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel" unique_id=1161123564]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="CanvasRect" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/CanvasPanel/MarginContainer" unique_id=2065518428]
+[node name="CanvasRect" type="ColorRect" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer" unique_id=2065518428]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=435253642]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer" unique_id=2072485280]
+layout_mode = 2
+
+[node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer" unique_id=938409143]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Terminar"
+
+[node name="Confirmation" type="Control" parent="CanvasLayer/MarginContainer" unique_id=638971364]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ConfirmationContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/Confirmation" unique_id=1084832744]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer" unique_id=967309483]
+layout_mode = 2
+text = "Esta es tu creación. Qué nombre tiene?"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer" unique_id=2001334635]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer" unique_id=1384061629]
+layout_mode = 2
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/HBoxContainer" unique_id=1663947076]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Confirmar"
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/HBoxContainer" unique_id=765727373]
+layout_mode = 2
+text = "Cancelar"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="text_changed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
