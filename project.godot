@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="museo magico jam 2"
-run/main_scene="uid://bn85754h3pykj"
+run/main_scene="uid://bi3yfo1lvp7p3"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://cu5wb631qx7aq"
 
 [display]
 

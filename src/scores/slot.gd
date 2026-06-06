@@ -7,6 +7,10 @@ signal requested_change
 func _on_button_pressed() -> void:
 	requested_change.emit()
 
+func disable():
+	$Button.disabled = true
+	$Button.text = ""
+
 func set_exhibit(view: ExhibitView) -> void:
 	for child: Node in get_children():
 		if child is ExhibitView:

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bi3yfo1lvp7p3"]
 
+[ext_resource type="Script" uid="uid://cyb7hshxt77ge" path="res://src/intro_level/intro_level.gd" id="1_4dggc"]
+
 [node name="IntroLevel" type="Node2D" unique_id=1888722561]
+script = ExtResource("1_4dggc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478445423]
 
@@ -40,6 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InitTestLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel" unique_id=587890230]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,11 +56,7 @@ offset_right = 180.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Empieza el dia 1.
-Tienes que crear criaturas con las partes.
-
-
-etc >.>"
+text = "..."
 
 [node name="Confirm" type="Button" parent="CanvasLayer/MarginContainer/BackPanel/Main" unique_id=2128401742]
 layout_mode = 1
@@ -71,3 +71,5 @@ grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 8
 text = "Terminar"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BackPanel/Main/Confirm" to="." method="_on_confirm_pressed"]

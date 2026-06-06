@@ -3,6 +3,7 @@ extends Node2D
 
 const PIECES_DIR := "res://assets/pieces/"
 @onready var canvas_rect: ColorRect = %CanvasRect
+var canvas_panel: Control 
 
 func _ready() -> void:
 	%ConfirmButton.disabled = true
@@ -29,17 +30,19 @@ func create_exhibit() -> Exhibit:
 			copy.texture = child.texture
 			copy.position = child.position
 			pieces.push_back(copy)
-	var new_exhibit := Exhibit.new(pieces, %LineEdit.text)
+	var new_exhibit := Exhibit.new(pieces, %LineEdit.text, Global.n_creations)
 	return new_exhibit
 
 func _on_submit_button_pressed() -> void:
 	%Main.hide()
 	%Confirmation.show()
-	var canvas_panel: Control = %CanvasPanel
+	if not canvas_panel:
+		canvas_panel = %CanvasPanel
 	#var comp_texture := create_composite_texture()
 	canvas_panel.get_parent().remove_child(canvas_panel)
 	%ConfirmationContainer.add_child(canvas_panel)
 	%ConfirmationContainer.move_child(canvas_panel, 0)
+	%LineEdit.grab_focus()
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%ConfirmButton.disabled = new_text.is_empty()
@@ -48,3 +51,22 @@ func _on_confirm_button_pressed() -> void:
 	var new_exhibit := create_exhibit()
 	DirAccess.make_dir_absolute("user://exhibits")
 	ResourceSaver.save(new_exhibit, "user://exhibits/" + new_exhibit.name + ".tres")
+	Global.n_creations += 1
+	#%Main.show()
+	#%Confirmation.hide()
+	##var comp_texture := create_composite_texture()
+	#canvas_panel.get_parent().remove_child(canvas_panel)
+	#%HBoxContainer.add_child(canvas_panel)
+	#%HBoxContainer.move_child(canvas_panel, 1)
+	if Global.n_creations < 3 * Global.day:
+		get_tree().reload_current_scene()
+	else:
+		get_tree().change_scene_to_file("res://src/scores/score_screen.tscn")
+
+
+func _on_canvas_rect_child_entered_tree(_node: Node) -> void:
+	%SubmitButton.disabled = canvas_rect.get_child_count() == 0
+
+
+func _on_canvas_rect_child_exiting_tree(_node: Node) -> void:
+	%SubmitButton.disabled = canvas_rect.get_child_count() <= 1
