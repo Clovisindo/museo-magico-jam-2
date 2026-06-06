@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvv2bhhuoweuk"]
+
+[ext_resource type="Script" uid="uid://hldqhaf6g5tg" path="res://src/scores/exhibit_view.gd" id="1_0mgxb"]
+
+[node name="ExhibitView" type="VBoxContainer" unique_id=1861389249]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0mgxb")
+
+[node name="Panel" type="Panel" parent="." unique_id=1989619945]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="." unique_id=1386826624]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nombre"
+horizontal_alignment = 1

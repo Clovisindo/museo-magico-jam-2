@@ -27,6 +27,7 @@ func create_exhibit() -> Exhibit:
 		if child is MovableTextureRect:
 			var copy := TextureRect.new()
 			copy.texture = child.texture
+			copy.position = child.position
 			pieces.push_back(copy)
 	var new_exhibit := Exhibit.new(pieces, %LineEdit.text)
 	return new_exhibit
