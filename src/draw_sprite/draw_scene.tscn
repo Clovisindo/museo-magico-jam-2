@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://717alkrqe2s4"]
+
+[ext_resource type="PackedScene" uid="uid://yh8r3m5nn6mn" path="res://src/draw_sprite/Draw_sprite.tscn" id="1_vannk"]
+
+[node name="DrawScene" type="Node2D" unique_id=674363033]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1611856392]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1580419045]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=1088708387]
+layout_mode = 2
+
+[node name="Main" type="Control" parent="CanvasLayer/MarginContainer" unique_id=1634675516]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer/Main" unique_id=1478626306]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 60.0
+offset_right = 824.0
+offset_bottom = 572.0
+
+[node name="DrawSprite" parent="CanvasLayer/MarginContainer/Main/Panel" unique_id=489874243 instance=ExtResource("1_vannk")]
+offset = Vector2(256, 256)
+img_size = Vector2i(512, 512)
+
+[node name="Confirm" type="Button" parent="CanvasLayer/MarginContainer/Main" unique_id=512865269]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+text = "Terminar"
