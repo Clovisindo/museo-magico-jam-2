@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bn85754h3pykj"]
+
+[node name="Canvas" type="Node2D" unique_id=979251437]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=251835460]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=600139013]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=160012215]
+layout_mode = 2
+
+[node name="CatalogPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1591230097]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel" unique_id=368954327]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/MarginContainer" unique_id=1071667301]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="CanvasPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=770087864]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CanvasPanel" unique_id=1161123564]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/CanvasPanel/MarginContainer" unique_id=2065518428]
+layout_mode = 2
