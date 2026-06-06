@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7kr1tlbx0nvf"]
 
-[ext_resource type="Texture2D" uid="uid://b3xvgw6ukhe23" path="res://icon.svg" id="1_rk4d4"]
+[ext_resource type="Texture2D" uid="uid://b3xvgw6ukhe23" path="res://assets/pieces/icon.svg" id="1_rk4d4"]
 [ext_resource type="Script" uid="uid://cacecifbe2h7l" path="res://src/movable_texture_rect/movable_texture_rect.gd" id="2_4oalm"]
 
 [node name="MovableTextureRect" type="TextureRect" unique_id=642898205]
@@ -12,3 +12,5 @@ grow_vertical = 2
 texture = ExtResource("1_rk4d4")
 stretch_mode = 2
 script = ExtResource("2_4oalm")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
