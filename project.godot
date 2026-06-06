@@ -13,7 +13,12 @@ config_version=5
 config/name="museo magico jam 2"
 run/main_scene="uid://bn85754h3pykj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://assets/pieces/icon.svg"
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [physics]
 

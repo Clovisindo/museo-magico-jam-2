@@ -30,5 +30,15 @@ func _on_movable_texture_rect_gui_input(event: InputEvent) -> void:
 			copy.global_position = global_position
 			copy.toggle_drag(true)
 			current_copy = copy
+			copy.ended_dragging.connect(_on_texture_ended_dragging, CONNECT_APPEND_SOURCE_OBJECT)
 			get_viewport().set_input_as_handled()
 			return
+
+func _on_texture_ended_dragging(texture: MovableTextureRect) -> void:
+	# Controlar que quede dentro del lienzo
+	var texture_rect := Rect2(texture.get_global_rect())
+	texture_rect.size = texture.texture.get_size()
+	print(target_parent.get_global_rect())
+	print(texture_rect)
+	if not target_parent.get_global_rect().encloses(texture_rect):
+		texture.queue_free()

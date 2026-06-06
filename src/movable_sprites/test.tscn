@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://w2wmr8tvew0x"]
-
-[ext_resource type="PackedScene" uid="uid://dpllof26f22j4" path="res://src/movable_sprites/movable_sprite.tscn" id="1_h2nwq"]
-
-[node name="Prototype" type="Node2D" unique_id=1132296854]
-
-[node name="MovableSprite" parent="." unique_id=937205175 instance=ExtResource("1_h2nwq")]
-position = Vector2(88, 77)

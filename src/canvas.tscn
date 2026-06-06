@@ -24,14 +24,19 @@ layout_mode = 2
 [node name="CatalogPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1591230097]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel" unique_id=368954327]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel" unique_id=1290338694]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+follow_focus = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/ScrollContainer" unique_id=368954327]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="PieceContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/MarginContainer" unique_id=1071667301]
+[node name="PieceContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/CatalogPanel/ScrollContainer/MarginContainer" unique_id=1071667301]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
