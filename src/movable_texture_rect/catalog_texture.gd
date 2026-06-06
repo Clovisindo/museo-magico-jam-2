@@ -38,7 +38,7 @@ func _on_texture_ended_dragging(texture: MovableTextureRect) -> void:
 	# Controlar que quede dentro del lienzo
 	var texture_rect := Rect2(texture.get_global_rect())
 	texture_rect.size = texture.texture.get_size()
-	print(target_parent.get_global_rect())
-	print(texture_rect)
+	#print(target_parent.get_global_rect())
+	#print(texture_rect)
 	if not target_parent.get_global_rect().encloses(texture_rect):
 		texture.queue_free()

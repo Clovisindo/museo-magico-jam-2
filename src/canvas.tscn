@@ -123,3 +123,4 @@ text = "Cancelar"
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="text_changed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]

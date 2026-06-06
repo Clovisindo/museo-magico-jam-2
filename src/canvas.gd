@@ -2,8 +2,10 @@ class_name Canvas
 extends Node2D
 
 const PIECES_DIR := "res://assets/pieces/"
+@onready var canvas_rect: ColorRect = %CanvasRect
 
 func _ready() -> void:
+	%ConfirmButton.disabled = true
 	%Confirmation.hide()
 	%Main.show()
 	# Cargar imágenes:
@@ -14,23 +16,20 @@ func _ready() -> void:
 		var scene := preload("res://src/movable_texture_rect/catalog_texture.tscn")
 		var new_catalog_texture: CatalogTexture = scene.instantiate()
 		var texture = load(filepath)
-		new_catalog_texture.target_parent = %CanvasRect
+		new_catalog_texture.target_parent = canvas_rect
 		new_catalog_texture.set_texture(texture)
 		new_catalog_texture.z_index = 100
 		%PieceContainer.add_child(new_catalog_texture)
 
-func create_composite_texture() -> CompositeTexture:
-	var new_composite := CompositeTexture.new()
+func create_exhibit() -> Exhibit:
 	var pieces: Array[TextureRect] = []
-	var positions: Array[Vector2] = []
-	for child: Node in %CanvasRect.get_children():
+	for child: Node in canvas_rect.get_children():
 		if child is MovableTextureRect:
 			var copy := TextureRect.new()
 			copy.texture = child.texture
 			pieces.push_back(copy)
-			positions.push_back(child.position)
-	new_composite.init(pieces, positions)
-	return new_composite
+	var new_exhibit := Exhibit.new(pieces, %LineEdit.text)
+	return new_exhibit
 
 func _on_submit_button_pressed() -> void:
 	%Main.hide()
@@ -43,3 +42,8 @@ func _on_submit_button_pressed() -> void:
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%ConfirmButton.disabled = new_text.is_empty()
+
+func _on_confirm_button_pressed() -> void:
+	var new_exhibit := create_exhibit()
+	DirAccess.make_dir_absolute("user://exhibits")
+	ResourceSaver.save(new_exhibit, "user://exhibits/" + new_exhibit.name + ".tres")

@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="DrawContainer" format=4]
+[gd_resource type="Resource" script_class="DrawContainer" format=4 uid="uid://b5ugd7i7shhpd"]
 
-[ext_resource type="Script" path="res://src/draw_sprite/draw_container.gd" id="1_gg066"]
+[ext_resource type="Script" uid="uid://de6wo2rds5mqd" path="res://src/draw_sprite/draw_container.gd" id="1_gg066"]
 
 [sub_resource type="Image" id="Image_byaiu"]
 data = {
