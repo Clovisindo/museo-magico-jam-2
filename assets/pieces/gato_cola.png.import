@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8gs64tvsv727"
-path="res://.godot/imported/icon3.png-96ede0101f5f792420530ab06586b3fd.ctex"
+uid="uid://eua4u6t1kmdi"
+path="res://.godot/imported/gato_cola.png-4adeb4526392a2f68f6dc012476df214.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/icon3.png"
-dest_files=["res://.godot/imported/icon3.png-96ede0101f5f792420530ab06586b3fd.ctex"]
+source_file="res://assets/pieces/gato_cola.png"
+dest_files=["res://.godot/imported/gato_cola.png-4adeb4526392a2f68f6dc012476df214.ctex"]
 
 [params]
 

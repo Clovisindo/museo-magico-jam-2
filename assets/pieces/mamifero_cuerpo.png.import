@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxamh7va5sce"
-path="res://.godot/imported/icon2.png-89b36ed229caa603c7ebb44c956ce424.ctex"
+uid="uid://c37di1d1tu8x6"
+path="res://.godot/imported/mamifero_cuerpo.png-ec480f6206cb66f8a04cc39ac363beb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/icon2.png"
-dest_files=["res://.godot/imported/icon2.png-89b36ed229caa603c7ebb44c956ce424.ctex"]
+source_file="res://assets/pieces/mamifero_cuerpo.png"
+dest_files=["res://.godot/imported/mamifero_cuerpo.png-ec480f6206cb66f8a04cc39ac363beb2.ctex"]
 
 [params]
 
