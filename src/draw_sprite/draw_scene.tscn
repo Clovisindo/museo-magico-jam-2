@@ -17,20 +17,20 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=1088708387]
+[node name="BackPanel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=1088708387]
 layout_mode = 2
 
 [node name="Main" type="Control" parent="CanvasLayer/MarginContainer" unique_id=1634675516]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer/Main" unique_id=1478626306]
+[node name="DrawPanel" type="Panel" parent="CanvasLayer/MarginContainer/Main" unique_id=1478626306]
 layout_mode = 0
 offset_left = 312.0
 offset_top = 60.0
 offset_right = 824.0
 offset_bottom = 572.0
 
-[node name="DrawSprite" parent="CanvasLayer/MarginContainer/Main/Panel" unique_id=489874243 instance=ExtResource("1_vannk")]
+[node name="DrawSprite" parent="CanvasLayer/MarginContainer/Main/DrawPanel" unique_id=489874243 instance=ExtResource("1_vannk")]
 offset = Vector2(256, 256)
 img_size = Vector2i(512, 512)
 

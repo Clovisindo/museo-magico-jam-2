@@ -5,5 +5,69 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478445423]
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1739755600]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="BackPanel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=2060620492]
+layout_mode = 2
+
+[node name="Main" type="Control" parent="CanvasLayer/MarginContainer/BackPanel" unique_id=874695862]
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 640.0
+
+[node name="InitialMsgPanel" type="Panel" parent="CanvasLayer/MarginContainer/BackPanel/Main" unique_id=2101698111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InitTestLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel" unique_id=587890230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -180.0
+offset_right = 180.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Empieza el dia 1.
+Tienes que crear criaturas con las partes.
+
+
+etc >.>"
+
+[node name="Confirm" type="Button" parent="CanvasLayer/MarginContainer/BackPanel/Main" unique_id=2128401742]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+text = "Terminar"
