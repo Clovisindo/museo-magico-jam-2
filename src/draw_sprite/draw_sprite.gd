@@ -37,7 +37,8 @@ func _input(event: InputEvent) -> void:
 
 func _export_paint_to_image() -> void:
 	var draw = DrawContainer.new(img,"name test","descp test")
-	ResourceSaver.save(draw, "res://assets/Drawings/test1.tres")
+	DirAccess.make_dir_absolute("user://Drawings")
+	ResourceSaver.save(draw, "user://Drawings/test1.tres")
 
 func _print_mouse_click( event : InputEvent) -> void:
 	var impos = _get_mouse_position(event)

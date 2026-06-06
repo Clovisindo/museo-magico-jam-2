@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bi3yfo1lvp7p3"]
+
+[node name="IntroLevel" type="Node2D" unique_id=1888722561]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478445423]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1739755600]
+offset_right = 40.0
+offset_bottom = 40.0
