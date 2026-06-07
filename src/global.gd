@@ -1,5 +1,6 @@
 extends Node
 
+var museum_name: String = "Museo"
 var day: int = 1
 var score: int = 0
 var n_creations: int = 0

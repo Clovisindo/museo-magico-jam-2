@@ -7,6 +7,7 @@ extends Control
 
 func _ready() -> void:
 	var scene: PackedScene = preload("res://src/scores/exhibit_view.tscn")
+	%Title.text = "%s: Día %d" % [Global.museum_name, Global.day]
 	%ScoreLabel.text = "Puntuación total: %d" % Global.score
 	%ContinueButton.hide()
 	var i = 0

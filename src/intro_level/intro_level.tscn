@@ -35,41 +35,45 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.0
+offset_left = -368.5
 offset_top = -256.0
-offset_right = 256.0
+offset_right = 368.5
 offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InitTestLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel" unique_id=587890230]
-unique_name_in_owner = true
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel" unique_id=1959215535]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -180.0
-offset_right = 180.0
-offset_bottom = 180.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "..."
-
-[node name="Confirm" type="Button" parent="CanvasLayer/MarginContainer/BackPanel/Main" unique_id=2128401742]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -31.0
-grow_horizontal = 0
-grow_vertical = 0
-size_flags_vertical = 8
-text = "Terminar"
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
 
-[connection signal="pressed" from="CanvasLayer/MarginContainer/BackPanel/Main/Confirm" to="." method="_on_confirm_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer" unique_id=2035719394]
+layout_mode = 2
+
+[node name="InitTestLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer" unique_id=587890230]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "..."
+fit_content = true
+scroll_following = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer" unique_id=894424274]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer" unique_id=2128401742]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "Continuar"
+
+[connection signal="text_changed" from="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer/Continue" to="." method="_on_confirm_pressed"]
