@@ -3,7 +3,7 @@ extends Node2D
 var day_1_text := """
 Acabas de abrir un [color=yellow]museo de criaturas fantásticas[/color]. La gente es tan ingenua que vendrá a visitarte, intrigada por las antiguas [color=yellow]leyendas del bosque[/color] cercano.
 
-En realidad compraste una tienda de animales disecados y simplemente los [color=yellow]cortarás y mezclarás para montar tus propios mitos[/color]. [wave amp=12][i]\"Mentalidad de tiburón\"[/i][/wave], te dices a ti misme.
+En realidad compraste una tienda de réplicas de animales y simplemente los [color=yellow]cortarás y mezclarás para montar tus propios mitos[/color]. [wave amp=12][i]\"Mentalidad de tiburón\"[/i][/wave], te dices a ti misme.
 
 Pronto abrirá el museo y debes dejar todo preparado para la inauguración.
 

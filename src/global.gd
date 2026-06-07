@@ -32,6 +32,12 @@ var tags_by_name_part := {
 	"cuerno": [Tag.PELIGROSA],
 	"ciervo": [Tag.BOSQUE, Tag.TIERRA],
 	"vaca": [Tag.TIERRA],
+	"paloma": [Tag.MASCOTA, Tag.AIRE],
+	"lagarto": [Tag.TIERRA, Tag.BOSQUE, Tag.PELIGROSA],
+	"gallo": [Tag.AIRE, Tag.BOSQUE, Tag.MASCOTA],
+	"ala": [Tag.AIRE],
+	"murcielago": [Tag.PELIGROSA],
+	"humano": [Tag.BOSQUE, Tag.PELIGROSA],
 }
 
 var theme_by_day := {
