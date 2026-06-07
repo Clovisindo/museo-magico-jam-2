@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://civy54bghwpx" path="res://src/canvas.gd" id="1_m4lpw"]
 [ext_resource type="Texture2D" uid="uid://2n2xc4nrot5g" path="res://assets/background/Holz Clean.jpg" id="2_ckee0"]
+[ext_resource type="ButtonGroup" uid="uid://du41upa1odtji" path="res://assets/new_button_group.tres" id="3_m6v3x"]
 
 [node name="Canvas" type="Node2D" unique_id=979251437]
 script = ExtResource("1_m4lpw")
@@ -102,11 +103,15 @@ layout_mode = 2
 [node name="DragButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=157629432]
 layout_mode = 2
 size_flags_vertical = 0
+toggle_mode = true
+button_group = ExtResource("3_m6v3x")
 text = "Mover"
 
 [node name="RotateButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=650646021]
 layout_mode = 2
 size_flags_vertical = 0
+toggle_mode = true
+button_group = ExtResource("3_m6v3x")
 text = "Rotar"
 
 [node name="ScaleButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=106260842]
@@ -119,12 +124,16 @@ text = "Escalar"
 [node name="FlipButtonHorizontal" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=339142677]
 layout_mode = 2
 size_flags_vertical = 0
+toggle_mode = true
+button_group = ExtResource("3_m6v3x")
 text = "Reflejar
 Horizontal"
 
 [node name="FlipButtonVertical" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=319738201]
 layout_mode = 2
 size_flags_vertical = 0
+toggle_mode = true
+button_group = ExtResource("3_m6v3x")
 text = "Reflejar
 Vertical"
 
