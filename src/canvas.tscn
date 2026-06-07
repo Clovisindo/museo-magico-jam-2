@@ -120,11 +120,11 @@ button_group = ExtResource("3_m6v3x")
 text = "Rotar"
 
 [node name="ScaleButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=106260842]
-visible = false
 layout_mode = 2
 size_flags_vertical = 0
-disabled = true
-text = "Escalar"
+toggle_mode = true
+button_group = ExtResource("3_m6v3x")
+text = "Reescalar"
 
 [node name="FlipButtonHorizontal" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=339142677]
 layout_mode = 2

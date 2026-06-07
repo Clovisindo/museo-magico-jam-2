@@ -17,15 +17,20 @@ func init() -> void:
 	set_deferred("size",Vector2i(texture.get_size().x,texture.get_size().y) ) 
 	set_deferred("pivot_offset", Vector2i(texture.get_size().x/2, texture.get_size().y / 2))
 
-func _process(_delta: float) -> void:
+var scale_time = 0.0
+func _process(delta: float) -> void:
 	if is_fixed:
 		return
 	if being_dragged:
 		global_position = get_global_mouse_position() - mouse_offset
 	if being_rotated:
-		rotation = lerp_angle(rotation, (get_global_mouse_position() - global_position).angle() + deg_to_rad(90), 2.5 * _delta)
+		rotation = lerp_angle(rotation, (get_global_mouse_position() - global_position).angle() + deg_to_rad(90), 2.5 * delta)
 	if being_scaled:
-		scale = lerp(scale, position - (get_global_mouse_position() - mouse_offset),0.1)
+		scale_time += delta
+		var period = 2.0
+		scale = Vector2.ONE * 3.0 * (0.1 + abs(scale_time / period - floor(scale_time / period + 0.5)))
+	else:
+		scale_time = 0
 	if being_fliped_h:
 		flip_h =  not flip_h
 		being_fliped_h = false
