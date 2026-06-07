@@ -72,10 +72,12 @@ func _on_button_pressed() -> void:
 		if not exhibit:
 			continue
 		var score := exhibit.calculate_score()
+		child.set_score(score)
 		Global.score += score
-	%ScoreLabel.text = "Puntuación total: %d" % Global.score
+	%ScoreLabel.text = "[color=green][wave]Puntuación total: %d[/wave][/color]" % Global.score
 	%ConfirmButton.hide()
 	%ContinueButton.show()
+	%ScoreLabel.show()
 	if Global.day == 3:
 		%ContinueButton.disabled = true
 		%ContinueButton.text = "Final del juego"

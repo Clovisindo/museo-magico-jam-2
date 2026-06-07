@@ -17,4 +17,20 @@ script = ExtResource("1_sit3w")
 layout_mode = 2
 text = "+"
 
+[node name="Control" type="Control" parent="." unique_id=1475217614]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=579720577]
+unique_name_in_owner = true
+z_index = 100
+layout_mode = 0
+offset_left = 98.0
+offset_top = 113.0
+offset_right = 226.0
+offset_bottom = 241.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "+100"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
