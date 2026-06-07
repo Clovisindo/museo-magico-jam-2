@@ -10,9 +10,13 @@ func _ready() -> void:
 	%Confirmation.hide()
 	%Main.show()
 	# Cargar imágenes:
+	var files = []
 	for file: String in DirAccess.get_files_at(PIECES_DIR):
 		if  not file.ends_with(".png"):
 			continue
+		files.push_back(file)
+	files.shuffle()
+	for file in files:
 		var filepath := PIECES_DIR.path_join(file)
 		var scene := preload("res://src/movable_texture_rect/catalog_texture.tscn")
 		var new_catalog_texture: CatalogTexture = scene.instantiate()

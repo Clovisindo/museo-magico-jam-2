@@ -8,6 +8,15 @@ script = ExtResource("1_m4lpw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=251835460]
 
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=1443950493]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ckee0")
+expand_mode = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=600139013]
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,28 +28,27 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Background" type="TextureRect" parent="CanvasLayer/MarginContainer" unique_id=1443950493]
-layout_mode = 2
-texture = ExtResource("2_ckee0")
-expand_mode = 1
-
 [node name="Main" type="Control" parent="CanvasLayer/MarginContainer" unique_id=1265952291]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/Main" unique_id=160012215]
 unique_name_in_owner = true
-layout_mode = 0
-offset_right = 1136.0
-offset_bottom = 632.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CatalogPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=1591230097]
 layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CatalogPanel" unique_id=1290338694]
-custom_minimum_size = Vector2(320, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 follow_focus = true
+horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CatalogPanel/ScrollContainer" unique_id=368954327]
 layout_mode = 2
@@ -53,6 +61,7 @@ theme_override_constants/margin_bottom = 4
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
+alignment = 1
 
 [node name="CanvasPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=770087864]
 unique_name_in_owner = true
@@ -66,7 +75,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_bottom = 8
 
 [node name="CanvasRect" type="ColorRect" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer" unique_id=2065518428]
 unique_name_in_owner = true
@@ -74,6 +83,12 @@ custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer" unique_id=1548193519]
+layout_mode = 2
+size_flags_vertical = 8
+text = "(Arrastra partes al lienzo para colocarlas)"
+horizontal_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=435253642]
 layout_mode = 2
@@ -104,12 +119,14 @@ text = "Escalar"
 [node name="FlipButtonHorizontal" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=339142677]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Reflejar horizontal"
+text = "Reflejar
+Horizontal"
 
 [node name="FlipButtonVertical" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=319738201]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Reflejar vertical"
+text = "Reflejar
+Vertical"
 
 [node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938409143]
 unique_name_in_owner = true
