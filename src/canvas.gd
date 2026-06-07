@@ -11,7 +11,7 @@ func _ready() -> void:
 	%Main.show()
 	# Cargar imágenes:
 	var files = []
-	for file: String in DirAccess.get_files_at(PIECES_DIR):
+	for file: String in ResourceLoader.list_directory(PIECES_DIR):
 		if  not file.ends_with(".png"):
 			continue
 		files.push_back(file)
