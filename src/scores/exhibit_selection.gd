@@ -19,6 +19,8 @@ func _ready() -> void:
 	)
 	
 	for exhibit: Exhibit in exhibits:
+		if exhibit in Global.saved_exhibits:
+			continue
 		var view: ExhibitView = scene.instantiate()
 		view.init(exhibit)
 		container.add_child(view)
