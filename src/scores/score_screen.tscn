@@ -146,5 +146,66 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Continuar"
 
+[node name="ReactionContainer1" type="PanelContainer" parent="." unique_id=367934261]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 90.0
+offset_right = 325.0
+offset_bottom = 292.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer1" unique_id=1053000744]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Reaction1" type="RichTextLabel" parent="ReactionContainer1/MarginContainer" unique_id=1522574886]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="ReactionContainer2" type="PanelContainer" parent="." unique_id=1781007271]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 808.0
+offset_top = 203.0
+offset_right = 1085.0
+offset_bottom = 405.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer2" unique_id=1216095240]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Reaction2" type="RichTextLabel" parent="ReactionContainer2/MarginContainer" unique_id=815735378]
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="ReactionContainer3" type="PanelContainer" parent="." unique_id=993775108]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 336.0
+offset_right = 323.0
+offset_bottom = 538.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer3" unique_id=1309537754]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Reaction3" type="RichTextLabel" parent="ReactionContainer3/MarginContainer" unique_id=659927237]
+layout_mode = 2
+bbcode_enabled = true
+
 [connection signal="pressed" from="Main/VBoxContainer/PanelContainer2/VBoxContainer/ConfirmButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/PanelContainer3/ScoreLabel/ContinueButton" to="." method="_on_continue_button_pressed"]

@@ -90,3 +90,46 @@ func _activate_drag():
 	flip_mode_h = false
 	flip_mode_v = false
 	drag_mode = true
+
+var reactions_low := [
+	'¡Vaya timo! A este [color=yellow]%s[/color] se le ve el pegamento entre las extremidades...',
+	'Este [color=yellow]%s[/color] no se parece en nada a como aparece en los libros.',
+	'No sé, este [color=yellow]%s[/color] parece falso...',
+	'Le ha arruinado la navidad a mis hijos. Nunca te lo perdonaré, [color=yellow]%s[/color].'
+]
+
+var reactions_mid := [
+	'¡Qué interesante! No conocía al [color=yellow]%s[/color].',
+	'Este [color=yellow]%s[/color] me recuerda a los cuentos que me contaba mi madre.',
+	'Qué curioso, ojalá existiese [color=yellow]%s[/color] en la vida real'
+]
+
+var reactions_high := [
+	'Wow! Juraría que una vez vi un [color=yellow]%s[/color] como este en el bosque.',
+	'Supera a como me lo imaginaba! Qué bien poder ber un [color=yellow]%s[/color] real.',
+	'Me puedo llevar al [color=yellow]%s[/color]? A mis hijas les encantaría.'
+]
+
+var reactions_bad_name := [
+	'[color=yellow]%s[/color]? Vaya nombre más tonto...',
+	'[color=yellow]%s[/color] parece un nombre inventado.',
+]
+
+var reactions_good_name := [
+	'[color=yellow]%s[/color], qué bien suena ese nombre!',
+	'Qué poético el nombre [color=yellow]%s[/color]. A quién se le ocurriría?',
+]
+
+var bad_theme_already_used := false
+var reactions_bad_theme := [
+	'En serio [color=yellow]%s[/color] vive en el bosque? No parece adaptado a este terreno.',
+	'Se supone que este [color=yellow]%s[/color] es peligroso? No lo parece para nada...',
+	'Qué feo es este [color=yellow]%s[/color]! No soporto verlo.'
+]
+
+var good_theme_already_used := false
+var reactions_good_theme := [
+	'Interesante. Este [color=yellow]%s[/color] parece perfectamente adaptado para la supervivencia en el bosque.',
+	'No me gustaría enfrentarme a un [color=yellow]%s[/color], espero que ya se extinguieran.',
+	'Qué mono es este [color=yellow]%s[/color]! Puedo llevármelo a casa?!',
+]
