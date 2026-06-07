@@ -7,24 +7,24 @@ flip_h,Reflejar\nHorizontal,Reflectir\nHorizontal
 flip_v,Reflejar\nVertical,Reflectir\nVertical
 hint,(Arrastra partes al lienzo para colocarlas),(Arrastra partes ao lenzo para colocalas)
 put_name,Esta es tu creación. Qué nombre tiene?,Esta é a túa creación. Que nome ten?
-low1,¡Vaya timo! A este [color=yellow]%s[/color] se le ve el pegamento entre las extremidades...,¡Vaia timo! A este [color=yellow]%s[/color] véselle o pegamento entre as extremidades...
-low2,Este [color=yellow]%s[/color] no se parece en nada a como aparece en los libros.,Este [color=yellow]%s[/color] non se parece en nada a como aparece nos libros.
-low3,"No sé, este [color=yellow]%s[/color] parece falso...","Non sei, este [color=yellow]%s[/color] parece falso...",
-low4,"Le ha arruinado la navidad a mis hijos. Nunca te lo perdonaré, [color=yellow]%s[/color].","Arruinoulle o nadal aos meus fillos. Nunca cho perdonarei, [color=yellow]%s[/color]."
-mid1,"¡Qué interesante! No conocía al [color=yellow]%s[/color].","¡Que interesante! Non coñecía ao [color=yellow]%s[/color]."
-mid2,"Este [color=yellow]%s[/color] me recuerda a los cuentos que me contaba mi madre.","Este [color=yellow]%s[/color] lémbrame aos contos que me contaba miña nai."
-mid3,"Qué curioso, ojalá existiese [color=yellow]%s[/color] en la vida real","Que curioso, oxalá existise [color=yellow]%s[/color] na vida real"
-high1,"Wow! Juraría que una vez vi un [color=yellow]%s[/color] como este en el bosque.","Wow! Xuraría que unha vez vin un [color=yellow]%s[/color] como este no bosque."
-high2,"Supera a como me lo imaginaba! Qué bien poder ver un [color=yellow]%s[/color] real.","Supera a como o imaxinaba! Que ben poder ver un [color=yellow]%s[/color] real."
-high3,"Me puedo llevar al [color=yellow]%s[/color]? A mis hijas les encantaría.","Podo levarme ao [color=yellow]%s[/color]? Ás miñas fillas encantaríalle."
-badname1,[color=yellow]%s[/color]? Vaya nombre más tonto...,[color=yellow]%s[/color]? Vaia nome máis tonto...
-badname2,"[color=yellow]%s[/color] parece un nombre inventado.","[color=yellow]%s[/color] parece un nome inventado."
-goodname1,[color=yellow]%s[/color], qué bien suena ese nombre!,[color=yellow]%s[/color], que ben soa ese nome!
-goodname2,"Qué poético el nombre [color=yellow]%s[/color]. A quién se le ocurriría?","Que poético o nome [color=yellow]%s[/color]. A quen se lle ocorrería?"
-badtheme1,"En serio [color=yellow]%s[/color] vive en el bosque? No parece adaptado a este terreno.","En serio [color=yellow]%s[/color] vive no bosque? Non parece adaptado a este terreo."
-badtheme2,Se supone que este [color=yellow]%s[/color] es peligroso? No lo parece para nada...,Suponse que este [color=yellow]%s[/color] é perigoso? Non o parece para nada...
-badtheme3,Qué feo es este [color=yellow]%s[/color]! No soporto verlo.,Que feo é este [color=yellow]%s[/color]! Non soporto velo.
-goodtheme1,Interesante. Este [color=yellow]%s[/color] parece perfectamente adaptado para la supervivencia en el bosque.,Interesante. Este [color=yellow]%s[/color] parece perfectamente adaptado para a supervivencia no bosque.
-goodtheme2,"No me gustaría enfrentarme a un [color=yellow]%s[/color], espero que ya se extinguieran.","Non me gustaría enfrentarme a un [color=yellow]%s[/color], espero que xa se extinguisen."
-goodtheme3,"Que riquiño é este [color=yellow]%s[/color]! Podo levarmo a casa?!"
-similar,"Este [color=yellow]%s[/color] se parece sospechosamente a un [color=yellow]%s[/color]....","Este [color=yellow]%s[/color] parécese sospeitosamente a un [color=yellow]%s[/color]...."
+low1,¡Vaya timo! A este [color=#00aa00]%s[/color] se le ve el pegamento entre las extremidades...,¡Vaia timo! A este [color=#00aa00]%s[/color] véselle o pegamento entre as extremidades...
+low2,Este [color=#00aa00]%s[/color] no se parece en nada a como aparece en los libros.,Este [color=#00aa00]%s[/color] non se parece en nada a como aparece nos libros.
+low3,"No sé, este [color=#00aa00]%s[/color] parece falso...","Non sei, este [color=#00aa00]%s[/color] parece falso...",
+low4,"Le ha arruinado la navidad a mis hijos. Nunca te lo perdonaré, [color=#00aa00]%s[/color].","Arruinoulle o nadal aos meus fillos. Nunca cho perdonarei, [color=#00aa00]%s[/color]."
+mid1,"¡Qué interesante! No conocía al [color=#00aa00]%s[/color].","¡Que interesante! Non coñecía ao [color=#00aa00]%s[/color]."
+mid2,"Este [color=#00aa00]%s[/color] me recuerda a los cuentos que me contaba mi madre.","Este [color=#00aa00]%s[/color] lémbrame aos contos que me contaba miña nai."
+mid3,"Qué curioso, ojalá existiese [color=#00aa00]%s[/color] en la vida real","Que curioso, oxalá existise [color=#00aa00]%s[/color] na vida real"
+high1,"Wow! Juraría que una vez vi un [color=#00aa00]%s[/color] como este en el bosque.","Wow! Xuraría que unha vez vin un [color=#00aa00]%s[/color] como este no bosque."
+high2,"Supera a como me lo imaginaba! Qué bien poder ver un [color=#00aa00]%s[/color] real.","Supera a como o imaxinaba! Que ben poder ver un [color=#00aa00]%s[/color] real."
+high3,"Me puedo llevar al [color=#00aa00]%s[/color]? A mis hijas les encantaría.","Podo levarme ao [color=#00aa00]%s[/color]? Ás miñas fillas encantaríalle."
+badname1,[color=#00aa00]%s[/color]? Vaya nombre más tonto...,[color=#00aa00]%s[/color]? Vaia nome máis tonto...
+badname2,"[color=#00aa00]%s[/color] parece un nombre inventado.","[color=#00aa00]%s[/color] parece un nome inventado."
+goodname1,[color=#00aa00]%s[/color], qué bien suena ese nombre!,[color=#00aa00]%s[/color], que ben soa ese nome!
+goodname2,"Qué poético el nombre [color=#00aa00]%s[/color]. A quién se le ocurriría?","Que poético o nome [color=#00aa00]%s[/color]. A quen se lle ocorrería?"
+badtheme1,"En serio [color=#00aa00]%s[/color] vive en el bosque? No parece adaptado a este terreno.","En serio [color=#00aa00]%s[/color] vive no bosque? Non parece adaptado a este terreo."
+badtheme2,Se supone que este [color=#00aa00]%s[/color] es peligroso? No lo parece para nada...,Suponse que este [color=#00aa00]%s[/color] é perigoso? Non o parece para nada...
+badtheme3,Qué feo es este [color=#00aa00]%s[/color]! No soporto verlo.,Que feo é este [color=#00aa00]%s[/color]! Non soporto velo.
+goodtheme1,Interesante. Este [color=#00aa00]%s[/color] parece perfectamente adaptado para la supervivencia en el bosque.,Interesante. Este [color=#00aa00]%s[/color] parece perfectamente adaptado para a supervivencia no bosque.
+goodtheme2,"No me gustaría enfrentarme a un [color=#00aa00]%s[/color], espero que ya se extinguieran.","Non me gustaría enfrentarme a un [color=#00aa00]%s[/color], espero que xa se extinguisen."
+goodtheme3,"Que riquiño é este [color=#00aa00]%s[/color]! Podo levarmo a casa?!"
+similar,"Este [color=#00aa00]%s[/color] se parece sospechosamente a un [color=#00aa00]%s[/color]....","Este [color=#00aa00]%s[/color] parécese sospeitosamente a un [color=#00aa00]%s[/color]...."

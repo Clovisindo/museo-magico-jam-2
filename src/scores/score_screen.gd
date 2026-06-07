@@ -82,7 +82,7 @@ func _on_button_pressed() -> void:
 		var comment = score_result[1]
 		var container = get_node("ReactionContainer%d" % i)
 		container.show()
-		container.get_node("MarginContainer").get_node("Reaction%d" % i).text = comment
+		container.get_node("MarginContainer").get_node("Reaction").text = comment
 		await get_tree().create_timer(1).timeout
 		i += 1
 	if Global.day == 3:
