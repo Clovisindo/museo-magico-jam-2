@@ -70,9 +70,14 @@ func calculate_score() -> Array:
 		bad_name = true
 	
 	if similar_to and randf() < 0.7:
+		var article = ("una" if Global.language == "es" else "unha") if similar_to in Global.feminine_animals else "un"
 		if Global.language == "gl" and similar_to in Global.traduciones:
 			similar_to = Global.traduciones[similar_to]
-		comment = TranslationServer.translate(Global.reactions_similarity[0]) % [name, similar_to]
+		comment = TranslationServer.translate(Global.reactions_similarity[0]) % [
+			name,
+			article,
+			similar_to,
+		]
 	elif bad_name and randf() < 0.7:
 		comment = TranslationServer.translate(Global.reactions_bad_name.pick_random())
 	elif good_name and randf() < 0.7:

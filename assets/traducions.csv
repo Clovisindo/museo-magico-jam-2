@@ -14,8 +14,8 @@ low4,"Le ha arruinado la navidad a mis hijos. Nunca te lo perdonaré, [color=#00
 mid1,"¡Qué interesante! No conocía al [color=#00aa00]%s[/color].","¡Que interesante! Non coñecía ao [color=#00aa00]%s[/color]."
 mid2,"Este [color=#00aa00]%s[/color] me recuerda a los cuentos que me contaba mi madre.","Este [color=#00aa00]%s[/color] lémbrame aos contos que me contaba miña nai."
 mid3,"Qué curioso, ojalá existiese [color=#00aa00]%s[/color] en la vida real","Que curioso, oxalá existise [color=#00aa00]%s[/color] na vida real"
-high1,"Wow! Juraría que una vez vi un [color=#00aa00]%s[/color] como este en el bosque.","Wow! Xuraría que unha vez vin un [color=#00aa00]%s[/color] como este no bosque."
-high2,"Supera a como me lo imaginaba! Qué bien poder ver un [color=#00aa00]%s[/color] real.","Supera a como o imaxinaba! Que ben poder ver un [color=#00aa00]%s[/color] real."
+high1,"Wow! Juraría que una vez vi une [color=#00aa00]%s[/color] como este en el bosque.","Wow! Xuraría que unha vez vin unhe [color=#00aa00]%s[/color] como este no bosque."
+high2,"Supera a como me lo imaginaba! Qué bien poder ver une [color=#00aa00]%s[/color] real.","Supera a como o imaxinaba! Que ben poder ver unhe [color=#00aa00]%s[/color] real."
 high3,"Me puedo llevar al [color=#00aa00]%s[/color]? A mis hijas les encantaría.","Podo levarme ao [color=#00aa00]%s[/color]? Ás miñas fillas encantaríalle."
 badname1,[color=#00aa00]%s[/color]? Vaya nombre más tonto...,[color=#00aa00]%s[/color]? Vaia nome máis tonto...
 badname2,"[color=#00aa00]%s[/color] parece un nombre inventado.","[color=#00aa00]%s[/color] parece un nome inventado."
@@ -25,6 +25,6 @@ badtheme1,"En serio [color=#00aa00]%s[/color] vive en el bosque? No parece adapt
 badtheme2,Se supone que este [color=#00aa00]%s[/color] es peligroso? No lo parece para nada...,Suponse que este [color=#00aa00]%s[/color] é perigoso? Non o parece para nada...
 badtheme3,Qué feo es este [color=#00aa00]%s[/color]! No soporto verlo.,Que feo é este [color=#00aa00]%s[/color]! Non soporto velo.
 goodtheme1,Interesante. Este [color=#00aa00]%s[/color] parece perfectamente adaptado para la supervivencia en el bosque.,Interesante. Este [color=#00aa00]%s[/color] parece perfectamente adaptado para a supervivencia no bosque.
-goodtheme2,"No me gustaría enfrentarme a un [color=#00aa00]%s[/color], espero que ya se extinguieran.","Non me gustaría enfrentarme a un [color=#00aa00]%s[/color], espero que xa se extinguisen."
+goodtheme2,"No me gustaría enfrentarme a une [color=#00aa00]%s[/color], espero que ya se extinguieran.","Non me gustaría enfrentarme a unhe [color=#00aa00]%s[/color], espero que xa se extinguisen."
 goodtheme3,"Que riquiño é este [color=#00aa00]%s[/color]! Podo levarmo a casa?!"
-similar,"Este [color=#00aa00]%s[/color] se parece sospechosamente a un [color=#00aa00]%s[/color]....","Este [color=#00aa00]%s[/color] parécese sospeitosamente a un [color=#00aa00]%s[/color]...."
+similar,"Este [color=#00aa00]%s[/color] se parece sospechosamente a %s [color=#00aa00]%s[/color]....","Este [color=#00aa00]%s[/color] parécese sospeitosamente a %s [color=#00aa00]%s[/color]...."

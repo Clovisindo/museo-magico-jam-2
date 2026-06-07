@@ -49,6 +49,12 @@ var traduciones := {
 	'murcielago': 'morcego',
 }
 
+var feminine_animals = [
+	"tortuga",
+	"vaca",
+	"paloma",
+]
+
 var theme_by_day := {
 	1: Tag.BOSQUE,
 	2: Tag.PELIGROSA,
