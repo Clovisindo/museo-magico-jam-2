@@ -34,7 +34,8 @@ func _ready() -> void:
 
 
 func _on_confirm_pressed() -> void:
-	Global.museum_name = %LineEdit.text
+	if Global.day == 1:
+		Global.museum_name = %LineEdit.text
 	%AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://src/canvas.tscn")
 
