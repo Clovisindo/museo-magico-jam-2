@@ -8,6 +8,7 @@ extends Resource
 @export var rotations: Array[float]
 @export var flip_h: Array[bool]
 @export var flip_v: Array[bool]
+@export var pivots: Array[Vector2]
 @export var id: int
 
 func _init(texture_rects: Array[TextureRect] = [], name_: String = "", id_: int = 0) -> void:
@@ -18,6 +19,7 @@ func _init(texture_rects: Array[TextureRect] = [], name_: String = "", id_: int 
 		rotations.push_back(texture.rotation)
 		flip_h.push_back(texture.flip_h)
 		flip_v.push_back(texture.flip_v)
+		pivots.push_back(texture.pivot_offset)
 		name = name_
 	id = id_
 

@@ -32,11 +32,16 @@ func create_exhibit() -> Exhibit:
 		if child is MovableTextureRect:
 			var copy := TextureRect.new()
 			copy.texture = child.texture
+			copy.pivot_offset = child.pivot_offset
 			copy.position = child.position
 			copy.scale = child.scale
 			copy.rotation = child.rotation
 			copy.flip_h = child.flip_h
 			copy.flip_v = child.flip_v
+			copy.offset_bottom = child.offset_bottom
+			copy.offset_right = child.offset_right
+			copy.offset_top = child.offset_top
+			copy.offset_left = child.offset_left
 			pieces.push_back(copy)
 	var new_exhibit := Exhibit.new(pieces, %LineEdit.text, Global.n_creations)
 	return new_exhibit

@@ -15,6 +15,7 @@ func init(exhibit_: Exhibit) -> void:
 		%SubViewport.add_child(texture_rect)
 		#texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		#texture_rect.size *= 0.5
+		texture_rect.pivot_offset = exhibit.pivots[i]
 		texture_rect.position = exhibit.positions[i]
 		texture_rect.scale = exhibit.sizes[i]
 		texture_rect.rotation = exhibit.rotations[i]
