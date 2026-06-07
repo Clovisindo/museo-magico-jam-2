@@ -33,6 +33,10 @@ func create_exhibit() -> Exhibit:
 			var copy := TextureRect.new()
 			copy.texture = child.texture
 			copy.position = child.position
+			copy.scale = child.scale
+			copy.rotation = child.rotation
+			copy.flip_h = child.flip_h
+			copy.flip_v = child.flip_v
 			pieces.push_back(copy)
 	var new_exhibit := Exhibit.new(pieces, %LineEdit.text, Global.n_creations)
 	return new_exhibit
