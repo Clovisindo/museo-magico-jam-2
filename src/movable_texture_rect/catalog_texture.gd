@@ -42,5 +42,5 @@ func _on_texture_ended_dragging(texture: MovableTextureRect) -> void:
 	texture_rect.size = texture.texture.get_size()
 	#print(target_parent.get_global_rect())
 	#print(texture_rect)
-	if not target_parent.get_global_rect().encloses(texture_rect):
+	if not target_parent.get_global_rect().has_point(texture_rect.get_center()):
 		texture.queue_free()
