@@ -23,11 +23,11 @@ func set_exhibit(view: ExhibitView) -> void:
 
 func set_score(score: int):
 	%RichTextLabel.text = "[wave]+%d[/wave]" % score
-	if score < 150:
+	if score < 200:
 		%RichTextLabel.modulate = Color.ORANGE_RED
-	elif score < 200:
+	elif score < 400:
 		%RichTextLabel.modulate = Color.YELLOW
-	elif score < 300:
+	elif score < 600:
 		%RichTextLabel.modulate = Color.GREEN_YELLOW
 	else:
 		%RichTextLabel.modulate = Color.GREEN

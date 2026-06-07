@@ -10,6 +10,7 @@ var scale_mode : bool = false
 var flip_mode_h : bool = false
 var flip_mode_v : bool = false
 var drag_mode : bool = true
+var used_names = []
 
 enum Tag {
 	BOSQUE,

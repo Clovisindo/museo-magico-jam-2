@@ -51,11 +51,16 @@ func _on_submit_button_pressed() -> void:
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%ConfirmButton.disabled = new_text.is_empty()
+	for used_name in Global.used_names:
+		if new_text == used_name:
+			%ConfirmButton.disabled = true
+			break
 
 func _on_confirm_button_pressed() -> void:
 	var new_exhibit := create_exhibit()
 	DirAccess.make_dir_absolute("user://exhibits")
 	ResourceSaver.save(new_exhibit, "user://exhibits/" + new_exhibit.name + ".tres")
+	Global.used_names.push_back(new_exhibit.name)
 	Global.n_creations += 1
 	#%Main.show()
 	#%Confirmation.hide()

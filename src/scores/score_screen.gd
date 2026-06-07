@@ -68,6 +68,7 @@ func _on_button_pressed() -> void:
 		3:
 			row = day_3_row
 	for child: Node in row.get_children():
+		child.disable()
 		var exhibit: Exhibit = child.exhibit
 		if not exhibit:
 			continue
