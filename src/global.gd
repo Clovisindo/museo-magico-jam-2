@@ -11,6 +11,7 @@ var flip_mode_h : bool = false
 var flip_mode_v : bool = false
 var drag_mode : bool = true
 var used_names = []
+var language := "gl"
 
 enum Tag {
 	BOSQUE,
@@ -30,15 +31,22 @@ var tags_by_name_part := {
 	"pulpo": [Tag.OCEANO, Tag.PELIGROSA],
 	"tiburon": [Tag.OCEANO, Tag.PELIGROSA],
 	"tortuga": [Tag.OCEANO, Tag.MASCOTA, Tag.TIERRA],
-	"cuerno": [Tag.PELIGROSA],
-	"ciervo": [Tag.BOSQUE, Tag.TIERRA],
-	"vaca": [Tag.TIERRA],
+	"ciervo": [Tag.BOSQUE, Tag.TIERRA, Tag.PELIGROSA],
+	"vaca": [Tag.TIERRA, Tag.PELIGROSA],
 	"paloma": [Tag.MASCOTA, Tag.AIRE],
 	"lagarto": [Tag.TIERRA, Tag.BOSQUE, Tag.PELIGROSA],
 	"gallo": [Tag.AIRE, Tag.BOSQUE, Tag.MASCOTA],
-	"ala": [Tag.AIRE],
-	"murcielago": [Tag.PELIGROSA],
+	"ave": [Tag.AIRE],
+	"murcielago": [Tag.PELIGROSA, Tag.AIRE],
 	"humano": [Tag.BOSQUE, Tag.PELIGROSA],
+}
+var traduciones := {
+	'pulpo': 'polbo',
+	'tortuga': 'tartaruga',
+	'ciervo': 'cervo',
+	'paloma': 'pomba',
+	'gallo': 'galo',
+	'murcielago': 'morcego',
 }
 
 var theme_by_day := {
@@ -92,44 +100,35 @@ func _activate_drag():
 	drag_mode = true
 
 var reactions_low := [
-	'¡Vaya timo! A este [color=yellow]%s[/color] se le ve el pegamento entre las extremidades...',
-	'Este [color=yellow]%s[/color] no se parece en nada a como aparece en los libros.',
-	'No sé, este [color=yellow]%s[/color] parece falso...',
-	'Le ha arruinado la navidad a mis hijos. Nunca te lo perdonaré, [color=yellow]%s[/color].'
+	'low1', 'low2', 'low3', 'low4'
 ]
 
 var reactions_mid := [
-	'¡Qué interesante! No conocía al [color=yellow]%s[/color].',
-	'Este [color=yellow]%s[/color] me recuerda a los cuentos que me contaba mi madre.',
-	'Qué curioso, ojalá existiese [color=yellow]%s[/color] en la vida real'
+	'mid1', 'mid2', 'mid3'
 ]
 
 var reactions_high := [
-	'Wow! Juraría que una vez vi un [color=yellow]%s[/color] como este en el bosque.',
-	'Supera a como me lo imaginaba! Qué bien poder ber un [color=yellow]%s[/color] real.',
-	'Me puedo llevar al [color=yellow]%s[/color]? A mis hijas les encantaría.'
+	'high1', 'high2', 'high3'
 ]
 
 var reactions_bad_name := [
-	'[color=yellow]%s[/color]? Vaya nombre más tonto...',
-	'[color=yellow]%s[/color] parece un nombre inventado.',
+	'badname1', 'badname2'
 ]
 
 var reactions_good_name := [
-	'[color=yellow]%s[/color], qué bien suena ese nombre!',
-	'Qué poético el nombre [color=yellow]%s[/color]. A quién se le ocurriría?',
+	'goodname1', 'goodname2'
 ]
 
 var bad_theme_already_used := false
 var reactions_bad_theme := [
-	'En serio [color=yellow]%s[/color] vive en el bosque? No parece adaptado a este terreno.',
-	'Se supone que este [color=yellow]%s[/color] es peligroso? No lo parece para nada...',
-	'Qué feo es este [color=yellow]%s[/color]! No soporto verlo.'
+	'badtheme1', 'badtheme2', 'badtheme3'
 ]
 
 var good_theme_already_used := false
 var reactions_good_theme := [
-	'Interesante. Este [color=yellow]%s[/color] parece perfectamente adaptado para la supervivencia en el bosque.',
-	'No me gustaría enfrentarme a un [color=yellow]%s[/color], espero que ya se extinguieran.',
-	'Qué mono es este [color=yellow]%s[/color]! Puedo llevármelo a casa?!',
+	'goodtheme1', 'goodtheme2', 'goodtheme3'
+]
+
+var reactions_similarity := [
+	'similar'
 ]

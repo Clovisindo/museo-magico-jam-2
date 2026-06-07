@@ -93,7 +93,7 @@ size_flags_vertical = 4
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/CanvasPanel/CanvasContainer" unique_id=1548193519]
 layout_mode = 2
 size_flags_vertical = 8
-text = "(Arrastra partes al lienzo para colocarlas)"
+text = "hint"
 horizontal_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/Main/HBoxContainer" unique_id=435253642]
@@ -131,16 +131,14 @@ layout_mode = 2
 size_flags_vertical = 0
 toggle_mode = true
 button_group = ExtResource("3_m6v3x")
-text = "Reflejar
-Horizontal"
+text = "flip_h"
 
 [node name="FlipButtonVertical" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=319738201]
 layout_mode = 2
 size_flags_vertical = 0
 toggle_mode = true
 button_group = ExtResource("3_m6v3x")
-text = "Reflejar
-Vertical"
+text = "flip_v"
 
 [node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938409143]
 unique_name_in_owner = true
@@ -172,7 +170,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer" unique_id=967309483]
 layout_mode = 2
-text = "Esta es tu creación. Qué nombre tiene?"
+text = "put_name"
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer" unique_id=2001334635]
 unique_name_in_owner = true

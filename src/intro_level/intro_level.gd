@@ -1,26 +1,11 @@
 extends Node2D
 
-var day_1_text := """
-Acabas de abrir un [color=yellow]museo de criaturas fantásticas[/color]. La gente es tan ingenua que vendrá a visitarte, intrigada por las antiguas [color=yellow]leyendas del bosque[/color] cercano.
-
-En realidad compraste una tienda de réplicas de animales y simplemente los [color=yellow]cortarás y mezclarás para montar tus propios mitos[/color]. [wave amp=12][i]\"Mentalidad de tiburón\"[/i][/wave], te dices a ti misme.
-
-Pronto abrirá el museo y debes dejar todo preparado para la inauguración.
-
-¿Qué nombre le pondrás a tu museo?
-"""
-var day_2_text := """
-El primer día ha sido un éxito, \"nos vamos a hacer de oro\", piensas.
-
-A la gente parecen atraerle especialmente las [color=yellow]criaturas peligrosas[/color], quizá sea buena idea ir en esa dirección...
-"""
-var day_3_text := """
-¡Este es el día decisivo para asentarte como el museo referente de la región!
-
-Sabes que hoy vendrán visitas escolares, así que puede ser buena idea tirar por [color=yellow]criaturas que podrían ser mascotas[/color].
-"""
+var day_1_text := "day1"
+var day_2_text := "day2"
+var day_3_text := "day3"
 
 func _ready() -> void:
+	%OptionButton.select(1 if Global.language == "es" else 0)
 	%Continue.hide()
 	%LineEdit.hide()
 	%InitTestLabel.text = get("day_%d_text" % Global.day)
@@ -41,3 +26,9 @@ func _on_confirm_pressed() -> void:
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%Continue.disabled = new_text.is_empty()
+
+
+func _on_option_button_item_selected(index: int) -> void:
+	Global.language = "es" if index == 1 else "gl"
+	TranslationServer.set_locale(Global.language)
+	get_tree().reload_current_scene()

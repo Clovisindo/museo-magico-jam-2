@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://fdfffbuv4fph" path="res://assets/background/OpenfootageNET_Textures_MedievalDoors_0002.jpg" id="2_owqwf"]
 [ext_resource type="AudioStream" uid="uid://bea06bym85lnj" path="res://assets/sounds/click1.ogg" id="2_r0pci"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0pci"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 0.5019608)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [node name="IntroLevel" type="Node2D" unique_id=1888722561]
 script = ExtResource("1_4dggc")
 
@@ -12,6 +19,15 @@ unique_name_in_owner = true
 stream = ExtResource("2_r0pci")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478445423]
+
+[node name="background" type="TextureRect" parent="CanvasLayer" unique_id=466709764]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_owqwf")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1739755600]
 anchors_preset = 15
@@ -24,13 +40,9 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="background" type="TextureRect" parent="CanvasLayer/MarginContainer" unique_id=466709764]
-layout_mode = 2
-texture = ExtResource("2_owqwf")
-expand_mode = 1
-
 [node name="BackPanel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=2060620492]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r0pci")
 
 [node name="Main" type="Control" parent="CanvasLayer/MarginContainer/BackPanel" unique_id=874695862]
 anchors_preset = 0
@@ -86,5 +98,45 @@ layout_mode = 2
 size_flags_vertical = 8
 text = "Continuar"
 
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer" unique_id=497677854]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/Control" unique_id=591738378]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -341.0
+offset_top = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "credits"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/MarginContainer/Control" unique_id=2075685497]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_right = 32.0
+grow_vertical = 0
+selected = 0
+item_count = 2
+popup/item_0/text = "Galego"
+popup/item_0/id = 0
+popup/item_1/text = "Castellano"
+popup/item_1/id = 1
+
 [connection signal="text_changed" from="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/BackPanel/Main/InitialMsgPanel/MarginContainer/VBoxContainer/Continue" to="." method="_on_confirm_pressed"]
+[connection signal="item_selected" from="CanvasLayer/MarginContainer/Control/OptionButton" to="." method="_on_option_button_item_selected"]

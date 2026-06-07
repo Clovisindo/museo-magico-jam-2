@@ -24,12 +24,18 @@ func calculate_score() -> Array:
 	var good_name := false
 	var bad_theme := randf() < 0.5
 	var good_theme := false
+	var similar_to = ""
 	for texture: Texture2D in textures:
 		var file_name = texture.resource_path.get_file()
 		file_name = file_name.split(".")[0]
 		var name_parts = file_name.split("_")
 		var animal_name = name_parts[0]
-		used_animals[animal_name] = true
+		if not animal_name in used_animals:
+			used_animals[animal_name] = 1
+		else:
+			used_animals[animal_name] += 1
+			if used_animals[animal_name] > 2:
+				similar_to = animal_name
 		for name_part in name_parts:
 			if name_part in Global.tags_by_name_part:
 				for tag in Global.tags_by_name_part[name_part]:
@@ -52,22 +58,24 @@ func calculate_score() -> Array:
 	score += used_letters.size() * 10
 	if (used_letters.size() > 10 or name.length() > 12) and randf() < 0.5:
 		good_name = true
-	if bad_name and randf() < 0.7:
-		comment = Global.reactions_bad_name.pick_random()
+	if similar_to and randf() < 0.7:
+		comment = TranslationServer.translate(Global.reactions_similarity[0]) % [name, similar_to]
+	elif bad_name and randf() < 0.7:
+		comment = TranslationServer.translate(Global.reactions_bad_name.pick_random())
 	elif good_name and randf() < 0.7:
-		comment = Global.reactions_good_name.pick_random()
+		comment = TranslationServer.translate(Global.reactions_good_name.pick_random())
 	elif bad_theme and not Global.bad_theme_already_used and randf() < 0.5:
-		comment = Global.reactions_bad_theme[Global.day - 1]
+		comment = TranslationServer.translate(Global.reactions_bad_theme[Global.day - 1])
 		Global.bad_theme_already_used = true
 	elif good_theme and not Global.good_theme_already_used and randf() < 0.5:
-		comment = Global.reactions_good_theme[Global.day - 1]
+		comment = TranslationServer.translate(Global.reactions_good_theme[Global.day - 1])
 		Global.good_theme_already_used = true
 	elif score < 350:
-		comment = Global.reactions_low.pick_random()
+		comment = TranslationServer.translate(Global.reactions_low.pick_random())
 	elif score > 600:
-		comment = Global.reactions_high.pick_random()
+		comment = TranslationServer.translate(Global.reactions_high.pick_random())
 	else:
-		comment = Global.reactions_mid.pick_random()
+		comment = TranslationServer.translate(Global.reactions_mid.pick_random())
 	if comment.contains("%s"):
 		comment = comment % name
 	return [score, comment]

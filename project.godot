@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="museo magico jam 2"
+config/name="O Museo Máxico dos Animais Estranos"
 run/main_scene="uid://bi3yfo1lvp7p3"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -25,6 +25,11 @@ MusicBackground="*uid://0gj8kv0553hv"
 window/size/viewport_width=1136
 window/size/viewport_height=640
 window/stretch/mode="canvas_items"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/traducions.es.translation", "res://assets/traducions.gl.translation")
+locale/fallback="gl"
 
 [physics]
 
