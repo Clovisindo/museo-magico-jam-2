@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bi3yfo1lvp7p3"]
 
 [ext_resource type="Script" uid="uid://cyb7hshxt77ge" path="res://src/intro_level/intro_level.gd" id="1_4dggc"]
+[ext_resource type="Texture2D" uid="uid://fdfffbuv4fph" path="res://assets/background/OpenfootageNET_Textures_MedievalDoors_0002.jpg" id="2_owqwf"]
 
 [node name="IntroLevel" type="Node2D" unique_id=1888722561]
 script = ExtResource("1_4dggc")
@@ -17,6 +18,11 @@ theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
+
+[node name="background" type="TextureRect" parent="CanvasLayer/MarginContainer" unique_id=466709764]
+layout_mode = 2
+texture = ExtResource("2_owqwf")
+expand_mode = 1
 
 [node name="BackPanel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=2060620492]
 layout_mode = 2

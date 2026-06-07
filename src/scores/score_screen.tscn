@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2kk57m6hpqn6" path="res://src/scores/score_screen.gd" id="1_hfj2x"]
 [ext_resource type="PackedScene" uid="uid://dmsb3l7d3otpw" path="res://src/scores/slot.tscn" id="1_qrma4"]
+[ext_resource type="Texture2D" uid="uid://2n2xc4nrot5g" path="res://assets/background/Holz Clean.jpg" id="2_g6pt5"]
 
 [node name="ScoreScreen" type="Control" unique_id=221272679]
 layout_mode = 3
@@ -13,9 +14,14 @@ grow_vertical = 2
 script = ExtResource("1_hfj2x")
 
 [node name="Background" type="TextureRect" parent="." unique_id=348029009]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g6pt5")
+expand_mode = 1
 
 [node name="Main" type="MarginContainer" parent="." unique_id=1642292092]
 unique_name_in_owner = true
