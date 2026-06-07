@@ -16,6 +16,8 @@ func init(exhibit_: Exhibit) -> void:
 		#texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		#texture_rect.size *= 0.5
 		texture_rect.position = exhibit.positions[i]
+		#texture_rect.scale = exhibit.sizes[i]
+		#texture_rect.rotation = exhibit.rotations[i]
 		await RenderingServer.frame_post_draw
 	var img: Image = %SubViewport.get_texture().get_image()
 	DirAccess.make_dir_absolute("user://exhibit_images")

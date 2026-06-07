@@ -5,6 +5,7 @@ extends Resource
 @export var textures: Array[Texture2D]
 @export var positions: Array[Vector2]
 @export var sizes: Array[Vector2]
+@export var rotations: Array[float]
 @export var id: int
 
 func _init(texture_rects: Array[TextureRect] = [], name_: String = "", id_: int = 0) -> void:
@@ -12,6 +13,7 @@ func _init(texture_rects: Array[TextureRect] = [], name_: String = "", id_: int 
 		textures.push_back(texture.texture)
 		positions.push_back(texture.position)
 		sizes.push_back(texture.size)
+		rotations.push_back(texture.rotation)
 		name = name_
 	id = id_
 
@@ -58,7 +60,12 @@ func calculate_score() -> Array:
 	score += used_letters.size() * 10
 	if (used_letters.size() > 10 or name.length() > 12) and randf() < 0.5:
 		good_name = true
+	elif (used_letters.size() < 4 or name.length() < 5) and randf() < 0.5:
+		bad_name = true
+	
 	if similar_to and randf() < 0.7:
+		if Global.language == "gl" and similar_to in Global.traduciones:
+			similar_to = Global.traduciones[similar_to]
 		comment = TranslationServer.translate(Global.reactions_similarity[0]) % [name, similar_to]
 	elif bad_name and randf() < 0.7:
 		comment = TranslationServer.translate(Global.reactions_bad_name.pick_random())

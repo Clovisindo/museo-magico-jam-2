@@ -85,13 +85,17 @@ func _on_button_pressed() -> void:
 		container.get_node("MarginContainer").get_node("Reaction%d" % i).text = comment
 		await get_tree().create_timer(1).timeout
 		i += 1
-	%ScoreLabel.text = "[color=green][wave]Puntuación total: %d[/wave][/color]" % Global.score
+	if Global.day == 3:
+		%ScoreLabel.text = "[color=green][wave]Puntuación final: %d[/wave][/color]" % Global.score
+	else:
+		%ScoreLabel.text = "[color=green][wave]Puntuación total: %d[/wave][/color]" % Global.score
 	%ConfirmButton.hide()
-	%ContinueButton.show()
 	%ScoreLabel.show()
 	if Global.day == 3:
 		%ContinueButton.disabled = true
-		%ContinueButton.text = "Final del juego"
+		%Credits.show()
+	else:
+		%ContinueButton.show()
 
 
 func _on_continue_button_pressed() -> void:
