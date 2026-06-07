@@ -84,5 +84,9 @@ func _on_scale_button_pressed() -> void:
 	Global._activate_scale()
 
 
-func _on_flip_button_pressed() -> void:
-	Global._activate_flip()
+func _on_flip_button_horizontal_pressed() -> void:
+	Global._activate_flip_h()
+
+
+func _on_flip_button_vertical_pressed() -> void:
+	Global._activate_flip_v()

@@ -6,7 +6,8 @@ var n_creations: int = 0
 var saved_exhibits: Array[Exhibit] = []
 var rotate_mode : bool = false
 var scale_mode : bool = false
-var flip_mode : bool = false
+var flip_mode_h : bool = false
+var flip_mode_v : bool = false
 var drag_mode : bool = true
 
 enum Tag {
@@ -50,23 +51,34 @@ func _ready() -> void:
 func _activate_rotate():
 	rotate_mode = true
 	scale_mode = false
-	flip_mode = false
+	flip_mode_h = false
+	flip_mode_v = false
 	drag_mode = false
 
 func _activate_scale():
 	rotate_mode = false
 	scale_mode = true
-	flip_mode = false
+	flip_mode_h = false
+	flip_mode_v = false
 	drag_mode = false
 
-func _activate_flip():
+func _activate_flip_h():
 	rotate_mode = false
 	scale_mode = false
-	flip_mode = true
+	flip_mode_h = true
+	flip_mode_v = false
+	drag_mode = false
+
+func _activate_flip_v():
+	rotate_mode = false
+	scale_mode = false
+	flip_mode_h = false
+	flip_mode_v = true
 	drag_mode = false
 
 func _activate_drag():
 	rotate_mode = false
 	scale_mode = false
-	flip_mode = false
+	flip_mode_h = false
+	flip_mode_v = false
 	drag_mode = true

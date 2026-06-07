@@ -89,14 +89,21 @@ size_flags_vertical = 0
 text = "Rotar"
 
 [node name="ScaleButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=106260842]
+visible = false
 layout_mode = 2
 size_flags_vertical = 0
+disabled = true
 text = "Escalar"
 
-[node name="FlipButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=339142677]
+[node name="FlipButtonHorizontal" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=339142677]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Reflejar"
+text = "Reflejar horizontal"
+
+[node name="FlipButtonVertical" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=319738201]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Reflejar vertical"
 
 [node name="SubmitButton" type="Button" parent="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=938409143]
 unique_name_in_owner = true
@@ -153,7 +160,8 @@ text = "Cancelar"
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/DragButton" to="." method="_on_drag_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/RotateButton" to="." method="_on_rotate_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ScaleButton" to="." method="_on_scale_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FlipButton" to="." method="_on_flip_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FlipButtonHorizontal" to="." method="_on_flip_button_horizontal_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FlipButtonVertical" to="." method="_on_flip_button_vertical_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Main/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="text_changed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Confirmation/ConfirmationContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
