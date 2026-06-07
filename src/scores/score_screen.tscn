@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dmsb3l7d3otpw" path="res://src/scores/slot.tscn" id="1_qrma4"]
 [ext_resource type="AudioStream" uid="uid://bea06bym85lnj" path="res://assets/sounds/click1.ogg" id="2_dpsif"]
 [ext_resource type="Texture2D" uid="uid://2n2xc4nrot5g" path="res://assets/background/Holz Clean.jpg" id="2_g6pt5"]
+[ext_resource type="Texture2D" uid="uid://bgbm4hvgk21mt" path="res://assets/bocata.png" id="5_s4bd5"]
 
 [node name="ScoreScreen" type="Control" unique_id=221272679]
 layout_mode = 3
@@ -171,10 +172,10 @@ vertical_alignment = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
-offset_left = 48.0
+offset_left = 31.0
 offset_top = 90.0
 offset_right = 325.0
-offset_bottom = 292.0
+offset_bottom = 137.0
 
 [node name="MarginContainer" type="MarginContainer" parent="ReactionContainer1" unique_id=1053000744]
 layout_mode = 2
@@ -185,48 +186,72 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Reaction1" type="RichTextLabel" parent="ReactionContainer1/MarginContainer" unique_id=1522574886]
 unique_name_in_owner = true
+z_index = 1
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
+fit_content = true
 
-[node name="ReactionContainer2" type="PanelContainer" parent="." unique_id=1781007271]
+[node name="NinePatchRect" type="NinePatchRect" parent="ReactionContainer1" unique_id=1228025318]
+layout_mode = 2
+texture = ExtResource("5_s4bd5")
+
+[node name="ReactionContainer2" type="PanelContainer" parent="." unique_id=1121576952]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
-offset_left = 808.0
-offset_top = 203.0
-offset_right = 1085.0
-offset_bottom = 405.0
+offset_left = 815.0
+offset_top = 238.0
+offset_right = 1109.0
+offset_bottom = 285.0
 
-[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer2" unique_id=1216095240]
+[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer2" unique_id=917449640]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Reaction2" type="RichTextLabel" parent="ReactionContainer2/MarginContainer" unique_id=815735378]
+[node name="Reaction2" type="RichTextLabel" parent="ReactionContainer2/MarginContainer" unique_id=862042773]
+z_index = 1
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
+fit_content = true
 
-[node name="ReactionContainer3" type="PanelContainer" parent="." unique_id=993775108]
+[node name="NinePatchRect" type="NinePatchRect" parent="ReactionContainer2" unique_id=1350134094]
+layout_mode = 2
+texture = ExtResource("5_s4bd5")
+
+[node name="ReactionContainer3" type="PanelContainer" parent="." unique_id=1864578684]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
-offset_left = 46.0
-offset_top = 336.0
+offset_left = 29.0
+offset_top = 356.0
 offset_right = 323.0
-offset_bottom = 538.0
+offset_bottom = 403.0
 
-[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer3" unique_id=1309537754]
+[node name="MarginContainer" type="MarginContainer" parent="ReactionContainer3" unique_id=2131707173]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Reaction3" type="RichTextLabel" parent="ReactionContainer3/MarginContainer" unique_id=659927237]
+[node name="Reaction3" type="RichTextLabel" parent="ReactionContainer3/MarginContainer" unique_id=1186429591]
+z_index = 1
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
+fit_content = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ReactionContainer3" unique_id=1099815985]
+layout_mode = 2
+texture = ExtResource("5_s4bd5")
 
 [connection signal="pressed" from="Main/VBoxContainer/PanelContainer2/VBoxContainer/ConfirmButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/PanelContainer3/ScoreLabel/ContinueButton" to="." method="_on_continue_button_pressed"]
