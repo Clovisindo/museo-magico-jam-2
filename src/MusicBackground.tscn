@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0gj8kv0553hv"]
+
+[ext_resource type="AudioStream" uid="uid://b23vtedj1qjr4" path="res://assets/sounds/ExPsyle - Without a Voice - Original Soundtrack - 05 Solace.mp3" id="1_nvjlh"]
+
+[node name="MusicBackground" type="Control" unique_id=68215478]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=210261270]
+stream = ExtResource("1_nvjlh")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
