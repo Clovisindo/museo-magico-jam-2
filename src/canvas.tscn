@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://civy54bghwpx" path="res://src/canvas.gd" id="1_m4lpw"]
 [ext_resource type="Texture2D" uid="uid://2n2xc4nrot5g" path="res://assets/background/Holz Clean.jpg" id="2_ckee0"]
+[ext_resource type="AudioStream" uid="uid://bea06bym85lnj" path="res://assets/sounds/click1.ogg" id="2_qxflw"]
 [ext_resource type="ButtonGroup" uid="uid://du41upa1odtji" path="res://assets/new_button_group.tres" id="3_m6v3x"]
 
 [node name="Canvas" type="Node2D" unique_id=979251437]
 script = ExtResource("1_m4lpw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1370910886]
+unique_name_in_owner = true
+stream = ExtResource("2_qxflw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=251835460]
 

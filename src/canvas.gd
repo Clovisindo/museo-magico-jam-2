@@ -47,6 +47,7 @@ func _on_submit_button_pressed() -> void:
 	%ConfirmationContainer.add_child(canvas_panel)
 	%ConfirmationContainer.move_child(canvas_panel, 0)
 	%LineEdit.grab_focus()
+	%AudioStreamPlayer.play()
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%ConfirmButton.disabled = new_text.is_empty()
@@ -62,6 +63,7 @@ func _on_confirm_button_pressed() -> void:
 	#canvas_panel.get_parent().remove_child(canvas_panel)
 	#%HBoxContainer.add_child(canvas_panel)
 	#%HBoxContainer.move_child(canvas_panel, 1)
+	%AudioStreamPlayer.play()
 	if Global.n_creations < 3 * Global.day:
 		get_tree().reload_current_scene()
 	else:
@@ -78,19 +80,24 @@ func _on_canvas_rect_child_exiting_tree(_node: Node) -> void:
 
 func _on_drag_button_pressed() -> void:
 	Global._activate_drag()
+	%AudioStreamPlayer.play()
 
 
 func _on_rotate_button_pressed() -> void:
 	Global._activate_rotate()
+	%AudioStreamPlayer.play()
 
 
 func _on_scale_button_pressed() -> void:
 	Global._activate_scale()
+	%AudioStreamPlayer.play()
 
 
 func _on_flip_button_horizontal_pressed() -> void:
 	Global._activate_flip_h()
+	%AudioStreamPlayer.play()
 
 
 func _on_flip_button_vertical_pressed() -> void:
 	Global._activate_flip_v()
+	%AudioStreamPlayer.play()

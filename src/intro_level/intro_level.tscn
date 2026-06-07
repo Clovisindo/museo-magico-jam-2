@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cyb7hshxt77ge" path="res://src/intro_level/intro_level.gd" id="1_4dggc"]
 [ext_resource type="Texture2D" uid="uid://fdfffbuv4fph" path="res://assets/background/OpenfootageNET_Textures_MedievalDoors_0002.jpg" id="2_owqwf"]
+[ext_resource type="AudioStream" uid="uid://bea06bym85lnj" path="res://assets/sounds/click1.ogg" id="2_r0pci"]
 
 [node name="IntroLevel" type="Node2D" unique_id=1888722561]
 script = ExtResource("1_4dggc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1539584904]
+unique_name_in_owner = true
+stream = ExtResource("2_r0pci")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478445423]
 

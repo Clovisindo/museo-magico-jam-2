@@ -35,8 +35,8 @@ func _ready() -> void:
 
 func _on_confirm_pressed() -> void:
 	Global.museum_name = %LineEdit.text
+	%AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://src/canvas.tscn")
-
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	%Continue.disabled = new_text.is_empty()

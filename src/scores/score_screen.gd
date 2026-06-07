@@ -44,6 +44,7 @@ func _ready() -> void:
 		i+=1
 
 func request_change(slot: Slot) -> void:
+	%AudioStreamPlayer.play()
 	var scene: PackedScene = preload("res://src/scores/exhibit_selection.tscn")
 	var exhibit_selection: ExhibitSelection = scene.instantiate()
 	get_tree().root.add_child(exhibit_selection)
@@ -57,6 +58,7 @@ func request_change(slot: Slot) -> void:
 
 
 func _on_button_pressed() -> void:
+	%AudioStreamPlayer.play()
 	var row: Control
 	match Global.day:
 		1:
@@ -80,5 +82,6 @@ func _on_button_pressed() -> void:
 
 
 func _on_continue_button_pressed() -> void:
+	%AudioStreamPlayer.play()
 	Global.day += 1
 	get_tree().change_scene_to_file("res://src/intro_level/intro_level.tscn")
