@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df7rclc2ffpae"
+path="res://.godot/imported/oiia oiia spinning cat .mp3-1ec67dade0c03181d3488c462370abc9.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/oiia oiia spinning cat .mp3"
+dest_files=["res://.godot/imported/oiia oiia spinning cat .mp3-1ec67dade0c03181d3488c462370abc9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

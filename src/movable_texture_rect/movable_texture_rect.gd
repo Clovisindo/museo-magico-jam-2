@@ -68,6 +68,10 @@ func toggle_drag(toggle_on: bool) -> void:
 
 func toggle_rotate(toggle_on: bool) -> void:
 	being_rotated = toggle_on
+	if being_rotated:
+		%OiiaoOiiao.play()
+	else:
+		%OiiaoOiiao.stop()
 
 func toggle_scale(toggle_on: bool) -> void:
 	being_scaled = toggle_on

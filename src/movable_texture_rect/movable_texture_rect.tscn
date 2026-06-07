@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dgl0h32k5wocr" path="res://assets/pieces/caracol.png" id="1_4oalm"]
 [ext_resource type="Script" uid="uid://cacecifbe2h7l" path="res://src/movable_texture_rect/movable_texture_rect.gd" id="2_4oalm"]
+[ext_resource type="AudioStream" uid="uid://df7rclc2ffpae" path="res://assets/sounds/oiia oiia spinning cat .mp3" id="3_xf201"]
 
 [node name="MovableTextureRect" type="TextureRect" unique_id=642898205]
 anchors_preset = 15
@@ -12,5 +13,10 @@ grow_vertical = 2
 texture = ExtResource("1_4oalm")
 stretch_mode = 2
 script = ExtResource("2_4oalm")
+
+[node name="OiiaoOiiao" type="AudioStreamPlayer" parent="." unique_id=525172409]
+unique_name_in_owner = true
+stream = ExtResource("3_xf201")
+volume_db = -20.0
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
